@@ -1,6 +1,8 @@
 class AddProducts < ActiveRecord::Migration[7.0]
   def change
              # Dannye o Producte
+
+             # 2 wariant ({    .......   })
   Product.create :titel => 'Hawaiian', 
                  :description => 'This is Hawaiian pizza!', 
                  :prise => 10, 
@@ -16,7 +18,7 @@ class AddProducts < ActiveRecord::Migration[7.0]
                  :size  => 30,
                  :is_spicy => false, 
                  :is_veg => false, 
-                 :is_best_offer => false, 
+                 :is_best_offer => true, 
                  :path_to_image => '/images/2.jpeg'
 
   Product.create :titel => 'Vegetarian', 
@@ -28,7 +30,5 @@ class AddProducts < ActiveRecord::Migration[7.0]
                  :is_best_offer => false, 
                  :path_to_image => '/images/3.jpeg'
 
-    
-
-  end
-end
+    end
+ end
