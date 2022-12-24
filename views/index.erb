@@ -1,18 +1,29 @@
 <h2>Welcome to Pizza Shop!!!</h2>
 
-<div class="row">
+<div class="row"> <!Tablica>
 
-<% @products.each do |p| %>
+  <% @products.each do |p| %>
  
-     <div class="col-md-3">
-  
-     <%= p.title %>
+    <div class="col-md-3"> <!Otstup w tablice "md-3" eto razmer>
      
-     </div>
-
+         <div>
+         <%= p.title %>    <!Nazwanie pizzy>
+         </div>
+        
+         <div>
+         <img src="<%= p.path_to_image%>" />  <! Foto pizzy>
+         </div>
+         
+         <div>
+         <%= p.description%>  <!Opisanie>
+         </div>
+    </div>
+      
   <% end %>
 
 </div>
 
+</br>
+</br>
 <button class="btn btn-primary" onclick="something()"> Click me! </button>
 
