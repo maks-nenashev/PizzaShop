@@ -1,4 +1,3 @@
-
 function something() 
 {
     var x = window.localStorage.getItem('aaa');
@@ -10,3 +9,9 @@ function something()
     alert (x); //("Hello!!");
     
 }
+
+function add_to_cart(id)
+{
+    alert('You added pizza with id:' + id);
+}
+
