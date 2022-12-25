@@ -11,7 +11,14 @@ function something()
 }
 
 function add_to_cart(id)
-{
-    alert('You added pizza with id:' + id);
+{        //Refactoring
+    var key = 'product_' + id; //Sozdaem peremennuy "key" so znacheniem 
+
+    var x = window.localStorage.getItem(key);
+    
+    x = x * 1 + 1;
+    
+    window.localStorage.setItem(key,x);
+    
 }
 
