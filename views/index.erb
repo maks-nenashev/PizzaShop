@@ -17,8 +17,19 @@
          <div>
          <%= p.description%>  <!Opisanie>
          </div>
+         
+         <div>
+         Size: <%= p.size%>cm
+         </div>
+
+         <div>
+         Price: <%= p.prise%>$
+         </div>
+        
+         <div>
+         <button class="btn btn-sm btn-success" onclick="add_to_cart(<%= p.id%>)"> Add to cart </button>
+         </div>
     </div>
-      
   <% end %>
 
 </div>
