@@ -9,7 +9,7 @@ function something()
     alert (x); //("Hello!!");
     
 }
-
+//////////////////////////////////////////////////////////////////////////////////////////
 function add_to_cart(id)
 {        //Refactoring
     var key = 'product_' + id; //Sozdaem peremennuy "key" so znacheniem 
@@ -22,19 +22,19 @@ function add_to_cart(id)
     update_orders_input()
     update_orders_button()
 }
-
+//////////////////////////////////////////////////////////////////////////////////////////////
 function update_orders_input()
 {                               //Podkluchenie
   var orders = cart_get_orders();  
   $('#orders_input').val(orders);
 }
-
+//////////////////////////////////////////////////////////////////////////////////////////////
 function update_orders_button()
 {
   var text = 'Cart (' + cart_get_number_of_items() + ')';
   $('#orders_button').val(text);
 }
-
+//////////////////////////////////////////////////////////////////////////////////////////////
 function cart_get_number_of_items()
 {
   var cnt = 0;
@@ -51,7 +51,7 @@ function cart_get_number_of_items()
   }
   return cnt;
 }
-
+//////////////////////////////////////////////////////////////////////////////////////////////
 function cart_get_orders()
 {
   var orders = '';
