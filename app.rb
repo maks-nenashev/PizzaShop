@@ -22,17 +22,13 @@ get '/about' do
 	erb :about
   end
 
+  # + to app.rb
 post '/cart' do
   orders_input = params[:orders]
 
   @items = parse_orders_input orders_input
   
-  @items.each do |item|
-    # id, cnt
-    item[0] = Product.find(item[0])
-  end
-
-  erb :cart
+  erb "Hello!! #{@items.inspect}"
   end
 
 # Parse orders line:
@@ -43,7 +39,7 @@ def parse_orders_input orders_input
   arr = []
 
   s1.each do |x|
-    s2 = x.split(/=/)
+    s2 = x.split(/\=/)
     s3 = s2[0].split(/_/)
 
     id = s3[1]
@@ -55,3 +51,5 @@ def parse_orders_input orders_input
 
   return arr
 end
+  
+  
