@@ -12,7 +12,7 @@ function something()
 //////////////////////////////////////////////////////////////////////////////////////////
 function add_to_cart(id)
 {        //Refactoring
-    var key = 'product_' + id; //Sozdaem peremennuy "key" so znacheniem 
+    var key = "product_" + id; //Sozdaem peremennuy "key" so znacheniem 
 
     var x = window.localStorage.getItem(key);
     
@@ -54,7 +54,7 @@ function cart_get_number_of_items()
 //////////////////////////////////////////////////////////////////////////////////////////////
 function cart_get_orders()
 {
-  var orders = '';
+  var orders = "";
 
   for (var i = 0; i < window.localStorage.length; i++)
   {
@@ -63,7 +63,7 @@ function cart_get_orders()
 
     if(key.indexOf('product_') == 0)
     {
-      orders = orders + value + '=' + value + ',';
+      orders = orders + key + '=' + value + ',';
     }
   }
   return orders;
