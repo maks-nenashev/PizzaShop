@@ -28,7 +28,7 @@ class AddProducts < ActiveRecord::Migration[7.0]
                  :is_spicy => false, 
                  :is_veg => false, 
                  :is_best_offer => false, 
-                 :path_to_image => '/images/3.jpg'
+                 :path_to_image => '/images/3.jpg' 
 
     end
  end
