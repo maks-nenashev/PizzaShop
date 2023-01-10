@@ -4,17 +4,27 @@
   <thead>
   <tr>
     <th>Name</th>
-    <th>Price</th>
+    <th>Price$</th>
     <th>Qty</th>
   </tr>
   </thead>
+         <% total_qty = 0 %> <! Sozdanie peremennyh dla podscheta obchego kol-va>
+         <% total_prise = 0 %>
 
         <% @items.each do |item| %>
   <tr>
         <td><%= item[0].title %></td>
-        <td><%= item[0].prise %></td>
+        <td><%= item[0].prise %> $</td>
         <td><%= item[1] %></td> <!id  kol-vo>
   </tr>
+        <% total_qty += item[1].to_i %>    <!Obchee kol-vo zakazow w karzine "podschet">
+        <% total_prise += item[0].prise * item[1].to_i %> <!Obchee kol-vo "Price">
         <%end%>
+  
+  <tr style="background: wathe;"> <!color>
+        <td></td>
+        <td>Total: <%= total_prise %> $</td>  <!Wywod summy >
+        <td><%= total_qty %></td>             <!Obchee Col=vo>
+  </tr>
   </tbody>
   </table>
