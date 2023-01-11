@@ -31,23 +31,23 @@
 
     <form action= "/place_order" method= "POST"> 
 
-    <input name="order[orders_input]" type="hidden" value="<%= @orders_input %>"/>
+    <input name="orders[orders_input]" type="hidden" value="<%= @orders_input %>"/>
     
     <div class="from-group">   
       <label>Name</label>                            
-      <input name="order[name]" type="text" class="form-control" placeholder="Your name"/>
+      <input name="orders[name]" type="text" class="form-control" placeholder="Your name"/>
     </div>
     
     <br>
     <div class="from-group">
       <label>Phone</label>                             
-      <input name="order[phone]" type="text" class="form-control" placeholder="Your phone"/>
+      <input name="orders[phone]" type="text" class="form-control" placeholder="Your phone"/>
     </div> 
      </br>
       
     <div class="from-group">
       <label>Delivery Address</label>                     
-      <input name="order[delivery]" type="text" class="form-control" placeholder="Delivery address"/>
+      <input name="orders[address]" type="text" class="form-control" placeholder="Delivery address"/>
      </div>
      <br>
 
